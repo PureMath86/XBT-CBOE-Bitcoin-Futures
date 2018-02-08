@@ -28,7 +28,7 @@ url = r"http://cfe.cboe.com/cfe-products/xbt-cboe-bitcoin-futures"
 while ((dt.now().hour >=2) and (dt.now().hour <= 16)):
     spider = RequestSoup_spider(url)
 
-    orig_df = pd.read_csv(r'.\scrape\CBOE.csv', header=0)
+    orig_df = pd.read_csv('./scrape/CBOE.csv', header=0)
     first_df = pd.read_html(spider.data, header=0)[0]
     first_df['time'] = dt.now()
     dfs = pd.read_html(spider.data)[1:]
