@@ -40,6 +40,6 @@ while ((dt.now().hour >=2) and (dt.now().hour <= 16)):
         df.columns = first_df.columns
         orig_df = orig_df.append(df)
 
-    orig_df.to_csv(r'.\scrape\CBOE.csv', index=False)
+    orig_df.to_csv('./scrape/CBOE.csv', index=False)
 
     time.sleep(TEN_MIN)
